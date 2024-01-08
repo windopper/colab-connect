@@ -48,10 +48,10 @@ def colabconnect() -> None:
     if is_colab():
         print("Mounting Google Drive...")
         drive = import_module("google.colab.drive")
-        drive.mount("/content/drive")
+        drive.mount("/content/gdrive")
     
         # Create a folder on drive to store all the code files
-        drive_folder = '/content/drive/MyDrive/colab/'
+        drive_folder = '/content/gdrive/MyDrive/colab/'
         Path(drive_folder).mkdir(parents=True, exist_ok=True)
     
         # Make a /colab path to easily access the folder
